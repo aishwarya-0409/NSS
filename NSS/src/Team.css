@@ -4,215 +4,390 @@ body, html {
 }
 
 .team-section {
-  padding: 5vh 5vw;
+  padding: 2vh 5vw; /* Reduced from 5vh */
   background-color: #f9f9f9;
   text-align: center;
 }
 
 .container {
-  max-width: 80vw;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #003366;
+}
+
+/* Main Titles */
+.main-title {
+  color: #004080;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 0.5rem; /* Reduced from 1rem */
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.main-subtitle {
+  color: #666;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin-bottom: 2rem; /* Reduced from 4rem */
+  font-weight: 300;
 }
 
 .section-title {
   color: #004080;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 2rem; /* Reduced from 3rem */
+  font-weight: 600;
 }
 
-.section-subtitle {
-  color: #666;
-  font-size: 1.8vh;
-  margin-bottom: 5vh;
+/* Single Member Sections */
+.single-member-section {
+  margin-bottom: 2rem; /* Reduced from 4rem */
 }
 
-
-
-
-
-
-
-/* Container for Joint Student Coordinators */
-.joint-coordinators {
+.single-member-grid {
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-
-
-.team-member {
-  background: white;
-  border-radius: 2vw;
-  overflow: hidden;
-  box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-  transform: translateY(-1vh);
-}
-
-.member-image {
-  position: relative;
-  height: 35vh;
-  overflow: hidden;
-}
-
-.member-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.member-info {
-  padding: 2vh;
-}
-
-.member-info h3 {
-  color: #004080;
-  font-size: 2vh;
-  margin: 0;
-}
-
-.member-info p {
-  color: #666;
-  font-size: 1.8vh;
-  margin-top: 1vh;
-}
-
-.unit-card {
-  width: 100%;
-  height: 0;
-  padding-bottom: 75%; /* This creates a responsive 4:3 aspect ratio */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 8px;
-  position: relative;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.unit-card:hover {
-  transform: scale(1.02);
-}
-
-.unit-card img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-
-.swiper {
-  padding: 20px 10px;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #333;
-}
-
-.swiper-pagination {
-  position: relative !important;
-  bottom: 0px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: auto !important;
-  z-index: 20;
-}
-
-/* Ensure Swiper container and slides have correct styles */
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Previous Team Member Styles */
-.previous-team {
-  margin-top: 6vh;
-  margin-bottom: 4vh;
-}
-
-.previous-team .team-member {
+  max-width: 400px;
   margin: 0 auto;
 }
 
-.prev_member-image {
-  position: relative;
-  height: 50vh;
+.single-member-card {
+  background: white;
+  border-radius: 15px;
   overflow: hidden;
-  border-radius: 2vw 2vw 0 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 100%;
 }
 
-.prev_member-image img {
+.single-member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.single-member-card .member-image {
+  height: 280px; /* Slightly reduced */
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.single-member-card .member-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
-/* Responsive adjustments for previous team */
+.single-member-card .member-info {
+  padding: 1.5rem; /* Reduced from 2rem */
+}
+
+.single-member-card .member-info h3 {
+  color: #004080;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.single-member-card .member-info p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Contact Information Styles */
+.contact-info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.contact-title {
+  color: #505e6c !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  line-height: 1.3;
+  margin: 0 0 0.3rem 0 !important;
+}
+
+.contact-number {
+  color: #455a6e !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.3;
+  margin: 0 !important;
+}
+
+/* Joint Coordinators Section */
+.joint-coordinators-section {
+  margin-bottom: 2rem; /* Reduced from 4rem */
+}
+
+.joint-coordinators-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem; /* Reduced from 3rem */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.joint-coordinator-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.joint-coordinator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.joint-coordinator-card .member-image {
+  height: 220px; /* Reduced from 250px */
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.joint-coordinator-card .member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.joint-coordinator-card .member-info {
+  padding: 1.25rem; /* Reduced from 1.5rem */
+}
+
+.joint-coordinator-card .member-info h3 {
+  color: #004080;
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.joint-coordinator-card .member-info p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Unit Officers Section */
+.unit-officers-section {
+  margin-bottom: 3rem; /* Reduced from 6rem */
+}
+
+.units-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Reduced from 3rem */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.unit-section {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem; /* Reduced from 2rem */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.unit-heading {
+  color: #004080;
+  font-size: 1.5rem;
+  margin-bottom: 1rem; /* Reduced from 1.5rem */
+  font-weight: 600;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 0.5rem;
+}
+
+.unit-members-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem; /* Reduced from 2rem */
+}
+
+.unit-member-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem; /* Reduced from 1rem */
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.unit-member-card:hover {
+  background: #e9ecef;
+}
+
+.member-image-small {
+  width: 70px; /* Reduced from 80px */
+  height: 70px; /* Reduced from 80px */
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #004080;
+}
+
+.member-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-details {
+  text-align: left;
+  flex: 1;
+}
+
+.member-details h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem 0;
+  font-weight: 600;
+}
+
+.member-details p {
+  color: #004080;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Unit Coordinators Section */
+.coordinators-section {
+  margin-bottom: 2rem; /* Reduced from 4rem */
+}
+
+.coordinators-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Reduced from 2rem */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.coordinators-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; /* Reduced from 1.5rem */
+  justify-content: center;
+}
+
+.coordinator-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem; /* Reduced from 1.5rem */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.coordinator-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.coordinator-image {
+  width: 90px; /* Reduced from 100px */
+  height: 90px; /* Reduced from 100px */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.8rem auto; /* Reduced from 1rem */
+  border: 3px solid #004080;
+}
+
+.coordinator-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coordinator-info h3 {
+  color: #004080;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.coordinator-info p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .prev_member-image {
-    height: 40vh;
+  .team-section {
+    padding: 1vh 3vw; /* Reduced from 3vh */
+  }
+
+  .joint-coordinators-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Reduced from 2rem */
+    max-width: 400px;
+  }
+
+  .unit-members-pair {
+    grid-template-columns: 1fr;
+    gap: 0.8rem; /* Reduced from 1rem */
+  }
+
+  .unit-member-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .member-details {
+    text-align: center;
+  }
+
+  .coordinators-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem; /* Reduced from 1rem */
+  }
+
+  .single-member-card .member-image {
+    height: 220px; /* Reduced from 250px */
+  }
+
+  .joint-coordinator-card .member-image {
+    height: 180px; /* Reduced from 200px */
   }
 }
 
 @media (max-width: 480px) {
-  .prev_member-image {
-    height: 35vh;
+  .coordinators-row {
+    grid-template-columns: 1fr;
+  }
+
+  .unit-section {
+    padding: 1rem; /* Reduced from 1.5rem */
+  }
+
+  .member-image-small {
+    width: 60px; /* Reduced from 70px */
+    height: 60px; /* Reduced from 70px */
+  }
+
+  .coordinator-image {
+    width: 70px; /* Reduced from 80px */
+    height: 70px; /* Reduced from 80px */
   }
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
-    gap: 3vh;
-  }
-
-  .member-image {
-    height: 30vh;
-  }
-
-  .unit-card img {
-    width: 100%;
-    height: 500px;
-  }
-
-  .unit-card {
-    padding-bottom: 100%; /* Square aspect ratio for mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
-    gap: 2vh;
-  }
-
-  .member-image {
-    height: 25vh;
-  }
-
-  .unit-card img {
-    width: 100%;
-    height: 200px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .unit-card {
-    padding-bottom: 56.25%; /* 16:9 aspect ratio for larger screens */
-  }
-}
-
