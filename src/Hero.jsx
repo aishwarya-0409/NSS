@@ -133,8 +133,8 @@ const Hero = () => {
             <span>OBJECTIVES</span>
           </button>
           <button onClick={() => scrollToSection('events')}>
-            <i className="fas fa-tasks"></i>
-            <span>EVENTS</span>
+            <i className="fas fa-calendar-alt"></i>
+            <span>LATEST EVENTS</span>
           </button>
           <button onClick={() => scrollToSection('activities')}>
             <i className="fas fa-tasks"></i>
